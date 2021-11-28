@@ -1,0 +1,47 @@
+General:
+
+You will be graded on model appropriateness, clarity in writing, and data intuition (use of graphics, a reasonable understanding of causal pathways, etc).  You may need to learn and use related models not covered in class as you would in any professional setting.  
+
+Submit your homework on canvas as a single PDF file with the report first and the reproducible markdown as an appendix.  In creating the markdown, it is sufficient to explain what the steps of your code are doing for someone who does not know the language you are writing in.  Please hide irrelevant output in your markdown file.  
+
+If you use graphics in the main body of your report (recommended) to communicate a concept, use a figure number and caption to refer to it.  When explaining the data (required), use a table.  Generally, your report should look professional.  
+
+You are encouraged to work collaboratively with your classmates; however, the work you submit should be your own.  Feel free to ask questions.
+
+Assignment:
+
+Your client is an economist working at a major credit card company.  She would like to identify factors that could potentially contribute to derogatory reports on a credit card applicant’s credit history.  The most common reasons for derogatory credit reports on an individual’s credit history include missed payments, bankruptcy, repossessions, and foreclosures.  Most individual reports will stay on someone’s credit history for up to seven years to ten years.
+
+The client collected data from individual credit card applications and other background information the company uses to determine the suitability of issuing a credit card to the applicant.  You should use your understanding of this process in terms of possible causal relationships between variables to determine variables to include in your model.  That is, you should include all variables that can potentially influence the outcome of interest regardless of significance or predictive value.  You should not include variables that the outcome influences; if this occurs, explain in the methods section (along with your model selection strategy and reasoning) why you excluded those variables in terms of their relationship with the outcome.  There is no need to use model selection to determine variables to include because there are enough observations (rows) of data to support all the variables (columns) in the data.
+
+As an economist, the client has some background in statistics and used a standard Poisson regression to model the data.  However, she is concerned that there may be too many zeros in the report variable (the number of derogatory reports) than would be in a true Poisson regression.  As such, she would like your expertise in modeling and interpreting the data for this purpose.  Search for a model that can handle count data with many zeros.  Compare this model with a standard GLM using a model fit metric, then choose one model to present in the main body of your report.  It is helpful to include other models in the appendix and you may decide to refer to those models to discuss the sensitivity of the model to your assumptions.  Make sure to clearly interpret your model in the results section.
+
+Your conclusion should briefly re-explain your goal for the analysis and give a big picture of which variables are most associated with derogatory reports and which are probably not influential.  This section should not be technical and should be easy to understand.
+
+The data, derogatory.csv, can be found on the glms directory on Github and Canvas.
+
+Variables:
+
+card - was the application for a credit card accepted?  The variables included contributed to determining this.
+
+reports - number of derogatory reports
+
+age -  applicant age in years at time of application
+
+income - yearly income in 10,000 USD
+
+share - ratio of monthly credit card expenditure to yearly income (generated from income and expenditure)
+
+expenditure - average monthly credit card expenditure
+
+owner - does the applicant own their home?
+
+selfemp - is the individual self-employed?
+
+dependents - number of dependents
+
+months - number of months living at current address
+
+majorcards - does the applicant have other major credit cards?
+
+active - number of active credit accounts
